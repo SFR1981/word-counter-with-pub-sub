@@ -1,6 +1,6 @@
 const PubSub  = require('../helper/pub_sub.js');
 
-const WordCounter = function (){
+const WordCounter = function () {
 
 };
 
@@ -16,8 +16,8 @@ WordCounter.prototype.bindEvents = function () {
 
 
 WordCounter.prototype.numberOfWords = function (text) {
-
+    return text.replace(/\s+/g,' ').trim().split(' ').length;
 };
 
 
-module.export = WordCounter;
+module.exports = WordCounter;
