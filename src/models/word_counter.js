@@ -16,7 +16,11 @@ WordCounter.prototype.bindEvents = function () {
 
 
 WordCounter.prototype.numberOfWords = function (text) {
+  if (text === ""){
+    return 0;
+  }else{
     return text.replace(/\s+/g,' ').trim().split(' ').length;
+  }
 };
 
 
